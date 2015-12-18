@@ -33,6 +33,7 @@ a:hover {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 li {
   padding-top: 0.5rem;
@@ -88,7 +89,7 @@ li {
 .projects li .key {
   display: table-cell;
   text-align: right;
-  padding: 0.27rem 0;
+  padding: 0.5rem 0;
 }
 .projects li .key:after {
   content: "-";
