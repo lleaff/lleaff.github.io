@@ -75,5 +75,7 @@ gulp.task('watch', ['build'], function() {
 
 gulp.task('deploy', ['build'], function() {
   return gulp.src(destPath + '/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      branch: 'master'
+    }));
 });

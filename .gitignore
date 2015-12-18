@@ -2,6 +2,9 @@
 sourcemaps/
 node_modules/
 .sass-cache/
+.publish/
+
+.tern-port
 
 #Binaries
 *.exe
