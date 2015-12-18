@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title lleaff's page
+    link(rel='stylesheet', href='css/main.css')
+  body#index
+    section#mainWrapper
+      header#mainHeader
+        span#mainTitle: span.inner lleaff
+        nav#headerLinks: ul
+          li: a(href='https://github.com/lleaff') GitHub
+          li: a(href='https://c9.io/lleaff') Cloud9
+      main
+        ul.projects
+          li
+            a.key(href='https://dphp-lleaff.c9users.io/') Dartygazin
+            span.def Dynamic site for an imaginary electronics retail company.
+              span.details  Collaboration. [PHP, JS]
+          li
+            a.key(href='https://vismonjobphp-lleaff.c9users.io/') VieMonJob
+            span.def
+              | Dynamic site for French startup Vie Mon Job. #[br]
+              | Features:#[br]
+              | Accounts, messaging, job posting, moderation, custom JavaScript UI elements. 
+              span.details  Collaboration. [PHP, JS (jQuery)]
+          li
+            a.key(href='https://github.com/lleaff/LynxChanFront') LynxChanFront
+            span.def Front-end for a forum-type software.
+              span.details  Solo. [Jade, SASS, JS]
+    script(src='js/main.js')

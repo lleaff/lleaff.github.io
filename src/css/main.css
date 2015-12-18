@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'verily_serif_monobook';
+  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot');
+  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.woff') format('woff'),
+  url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.ttf') format('truetype'),
+  url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*, *:before, *:after { box-sizing: border-box; }
+body { box-sizing: border-box; }
+
+
+body {
+  font-family: 'verily_serif_monobook', serif;
+  background: #faf8f3;
+  color: #111;
+}
+
+a {
+  color: #6a4;
+  text-decoration: none;
+}
+a:visited {
+  color: #572;
+}
+a:hover {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+#mainWrapper {
+  max-width: 80rem;
+  width: 100%;
+  margin: 3rem auto 1rem;
+  text-align: center;
+}
+
+#mainHeader {
+  padding-bottom: 3rem;
+}
+
+#mainTitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+#mainTitle.inner {
+  border-bottom: #111;
+}
+
+#headerLinks {
+  display: inline-block;
+}
+#headerLinks ul {
+  padding: 0;
+}
+#headerLinks li:not(:last-child):after {
+  content: ".";
+  padding-left: 0.9rem;
+}
+#headerLinks li:not(:last-child) {
+  padding: 0 0.9rem 0 0;
+}
+#headerLinks li {
+  display: inline-block;
+}
+
+.projects {
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+}
+.projects li {
+  display: table-row;
+}
+.projects li .key {
+  display: table-cell;
+  text-align: right;
+  padding: 0.27rem 0;
+}
+.projects li .key:after {
+  content: "-";
+  padding: 0 1.3rem 0 1.15rem;
+}
+.projects li .def {
+  display: table-cell;
+  padding-left: 0.7em;
+  text-indent: -0.9em;
+}
+.projects .details {
+  padding-left: 1.5rem;
+  float: right;
+}
