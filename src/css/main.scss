@@ -30,10 +30,6 @@ a:visited {
 /* color: #572; */
 }
 a:hover {
-  /*
-  text-decoration: underline;
-  text-underline-position: under;
-*/
   border-bottom: 1px solid lighten($mainFgColor, 30%);
 /* color: inherit; */
 }
@@ -112,6 +108,7 @@ $projectsRowMargin: 0.8rem; /* Apply on cell with greatest height */
   padding-left: 0.7em;
   text-indent: -0.9em;
   padding-bottom: $projectsRowMargin;
+  width: 60%;
 }
 .projects .details {
   display: table-cell;

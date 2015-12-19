@@ -1,16 +1,55 @@
+mixin scripts
+  script(src='js/main.js')
+
+mixin stylesheets
+  link(rel='stylesheet', href='css/main.css')
+
 mixin project(o)
-  li
+  li.project
     span.key: a(href=o.link)= o.title
-    span.def
-      block
+    span.def!= o.desc
     span.details= o.details + ' . ' + o.tech
+  if block
+    li.projectPane
+      o.pane
+
+mixin projects
+  ul(class!=attributes.class, id!=attributes.id)
+    +project({
+      title: 'VieMonJob',
+      link: 'https://vismonjobphp-lleaff.c9users.io/',
+      desc: `Dynamic site for French startup Vie Mon Job. <br>
+      Features: <br>
+      Accounts, messaging, job posting, moderation, custom generic JavaScript UI elements (tabs, notifications, modals).`,
+      details: 'Collaboration',
+      tech: 'PHP, JS (jQuery)',
+    })
+      
+    +project({
+      title: 'Dartygazin',
+      link: 'https://dphp-lleaff.c9users.io/',
+      desc: 'Mockup for an imaginary electronics retail business. Mix of static and dynamic content (index page is static, categories, product and basket pages are dynamic).',
+      details: 'Collaboration',
+      tech: 'PHP, JS',
+    })
+
+    +project({
+      title: 'LynxChanFront',
+      link: 'https://github.com/lleaff/LynxChanFront',
+      desc: 'Front-end for an imageboard hosting software.',
+      details: 'Solo',
+      tech: 'Jade, SASS, JS'
+    })
+
+
+//------------------------------------------------------------
 
 doctype html
 html
   head
     meta(charset='utf-8')
     title lleaff's page
-    link(rel='stylesheet', href='css/main.css')
+    +stylesheets
   body#index
     section#mainWrapper
       header#mainHeader
@@ -19,29 +58,6 @@ html
           li: a(href='https://github.com/lleaff') GitHub
           li: a(href='https://c9.io/lleaff') Cloud9
       main
-        ul.projects
-          +project({
-            title: 'Dartygazin',
-            link: 'https://dphp-lleaff.c9users.io/',
-            details: 'Collaboration',
-            tech: 'PHP, JS'
-          })
-            | Mostly static site for an imaginary electronics retail company.
-          +project({
-            title: 'VieMonJob',
-            link: 'https://vismonjobphp-lleaff.c9users.io/',
-            details: 'Collaboration',
-            tech: 'PHP, JS (jQuery)'
-          })
-            | Dynamic site for French startup Vie Mon Job. #[br]
-            | Features:#[br]
-            | Accounts, messaging, job posting, moderation, custom JavaScript UI elements. 
-          +project({
-            title: 'LynxChanFront',
-            link: 'https://github.com/lleaff/LynxChanFront',
-            details: 'Solo',
-            tech: 'Jade, SASS, JS'
-          })
-            | Front-end for a forum-type software.
+        +projects.projects
             
-    script(src='js/main.js')
+    +scripts

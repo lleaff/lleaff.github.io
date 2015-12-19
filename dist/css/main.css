@@ -20,7 +20,7 @@ a { color: #111111; /*  color: #6a4; */ font-weight: bold; text-decoration: none
 
 a:visited { /* color: #572; */ }
 
-a:hover { /* text-decoration: underline; text-underline-position: under; */ border-bottom: 1px solid #5e5e5e; /* color: inherit; */ }
+a:hover { border-bottom: 1px solid #5e5e5e; /* color: inherit; */ }
 
 ul { list-style: none; padding: 0; }
 
@@ -54,6 +54,6 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 .projects li .key:after { content: "."; text-decoration: none; padding: 0 1.3rem 0 1.15rem; }
 
-.projects li .def { display: table-cell; padding-left: 0.7em; text-indent: -0.9em; padding-bottom: 0.8rem; }
+.projects li .def { display: table-cell; padding-left: 0.7em; text-indent: -0.9em; padding-bottom: 0.8rem; width: 60%; }
 
 .projects .details { display: table-cell; padding-left: 1.5rem; font-style: italic; }
