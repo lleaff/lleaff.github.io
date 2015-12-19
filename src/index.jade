@@ -1,3 +1,10 @@
+mixin project(title, link, details, tech)
+  li
+    a.key(href=link)= title
+    span.def
+      block
+    span.details= details + ' . ' + tech
+
 doctype html
 html
   head
@@ -13,19 +20,16 @@ html
           li: a(href='https://c9.io/lleaff') Cloud9
       main
         ul.projects
-          li
-            a.key(href='https://dphp-lleaff.c9users.io/') Dartygazin
-            span.def Mostly static site for an imaginary electronics retail company.
-              span.details  Collaboration. [PHP, JS]
-          li
-            a.key(href='https://vismonjobphp-lleaff.c9users.io/') VieMonJob
-            span.def
-              | Dynamic site for French startup Vie Mon Job. #[br]
-              | Features:#[br]
-              | Accounts, messaging, job posting, moderation, custom JavaScript UI elements. 
-              span.details  Collaboration. [PHP, JS (jQuery)]
-          li
-            a.key(href='https://github.com/lleaff/LynxChanFront') LynxChanFront
-            span.def Front-end for a forum-type software.
-              span.details  Solo. [Jade, SASS, JS]
+          +project('Dartygazin', 'https://dphp-lleaff.c9users.io/',
+            'Collaboration', 'PHP, JS')
+            | Mostly static site for an imaginary electronics retail company.
+          +project('VieMonJob', 'https://vismonjobphp-lleaff.c9users.io/',
+            'Collaboration', 'PHP, JS (jQuery)')
+            | Dynamic site for French startup Vie Mon Job. #[br]
+            | Features:#[br]
+            | Accounts, messaging, job posting, moderation, custom JavaScript UI elements. 
+          +project('LynxChanFront', 'https://github.com/lleaff/LynxChanFront',
+            'Solo', 'Jade, SASS, JS')
+            | Front-end for a forum-type software.
+            
     script(src='js/main.js')

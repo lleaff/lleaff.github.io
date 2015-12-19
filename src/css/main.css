@@ -65,14 +65,17 @@ body {
 }
 
 a {
-  color: #6a4;
+  color: #111;
+/*  color: #6a4; */
+  font-weight: bold;
   text-decoration: none;
 }
 a:visited {
-  color: #572;
+/* color: #572; */
 }
 a:hover {
-  color: inherit;
+  color: #555;
+/* color: inherit; */
 }
 
 ul {
@@ -146,6 +149,7 @@ li {
   text-indent: -0.9em;
 }
 .projects .details {
+  display: table-cell;
   padding-left: 1.5rem;
-  color: #555;
+  font-style: italic;
 }
