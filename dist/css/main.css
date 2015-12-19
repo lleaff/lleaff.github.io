@@ -1,155 +1,59 @@
-@font-face {
-  font-family: 'verily_serif_monobook';
-  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot');
-  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.woff') format('woff'),
-    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.ttf') format('truetype'),
-    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@font-face { font-family: 'verily_serif_monobook'; src: url("/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot"); src: url("/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/verilyserifmono_book/VerilySerifMono-webfont.woff") format("woff"), url("/fonts/verilyserifmono_book/VerilySerifMono-webfont.ttf") format("truetype"), url("/fonts/verilyserifmono_book/VerilySerifMono-webfont.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-@font-face {
-  font-family: 'charis_sil';
-  src: url('/fonts/charissil/charissilr-webfont.eot');
-  src: url('/fonts/charissil/charissilr-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/charissil/charissilr-webfont.woff2') format('woff2'),
-    url('/fonts/charissil/charissilr-webfont.woff') format('woff'),
-    url('/fonts/charissil/charissilr-webfont.ttf') format('truetype'),
-    url('/fonts/charissil/charissilr-webfont.svg#charis_silregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'charis_sil';
-  src: url('/fonts/charissil/charissili-webfont.eot');
-  src: url('/fonts/charissil/charissili-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/charissil/charissili-webfont.woff2') format('woff2'),
-    url('/fonts/charissil/charissili-webfont.woff') format('woff'),
-    url('/fonts/charissil/charissili-webfont.ttf') format('truetype'),
-    url('/fonts/charissil/charissili-webfont.svg#charis_silitalic') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'charis_sil';
-  src: url('/fonts/charissil/charissilbi-webfont.eot');
-  src: url('/fonts/charissil/charissilbi-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/charissil/charissilbi-webfont.woff2') format('woff2'),
-    url('/fonts/charissil/charissilbi-webfont.woff') format('woff'),
-    url('/fonts/charissil/charissilbi-webfont.ttf') format('truetype'),
-    url('/fonts/charissil/charissilbi-webfont.svg#charis_silbold_italic') format('svg');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'charis_sil';
-  src: url('/fonts/charissil/charissilb-webfont.eot');
-  src: url('/fonts/charissil/charissilb-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/charissil/charissilb-webfont.woff2') format('woff2'),
-    url('/fonts/charissil/charissilb-webfont.woff') format('woff'),
-    url('/fonts/charissil/charissilb-webfont.ttf') format('truetype'),
-    url('/fonts/charissil/charissilb-webfont.svg#charis_silbold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
+@font-face { font-family: 'charis_sil'; src: url("/fonts/charissil/charissilr-webfont.eot"); src: url("/fonts/charissil/charissilr-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/charissil/charissilr-webfont.woff2") format("woff2"), url("/fonts/charissil/charissilr-webfont.woff") format("woff"), url("/fonts/charissil/charissilr-webfont.ttf") format("truetype"), url("/fonts/charissil/charissilr-webfont.svg#charis_silregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'charis_sil'; src: url("/fonts/charissil/charissili-webfont.eot"); src: url("/fonts/charissil/charissili-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/charissil/charissili-webfont.woff2") format("woff2"), url("/fonts/charissil/charissili-webfont.woff") format("woff"), url("/fonts/charissil/charissili-webfont.ttf") format("truetype"), url("/fonts/charissil/charissili-webfont.svg#charis_silitalic") format("svg"); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: 'charis_sil'; src: url("/fonts/charissil/charissilbi-webfont.eot"); src: url("/fonts/charissil/charissilbi-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/charissil/charissilbi-webfont.woff2") format("woff2"), url("/fonts/charissil/charissilbi-webfont.woff") format("woff"), url("/fonts/charissil/charissilbi-webfont.ttf") format("truetype"), url("/fonts/charissil/charissilbi-webfont.svg#charis_silbold_italic") format("svg"); font-weight: bold; font-style: italic; }
+
+@font-face { font-family: 'charis_sil'; src: url("/fonts/charissil/charissilb-webfont.eot"); src: url("/fonts/charissil/charissilb-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/charissil/charissilb-webfont.woff2") format("woff2"), url("/fonts/charissil/charissilb-webfont.woff") format("woff"), url("/fonts/charissil/charissilb-webfont.ttf") format("truetype"), url("/fonts/charissil/charissilb-webfont.svg#charis_silbold") format("svg"); font-weight: bold; font-style: normal; }
 
 *, *:before, *:after { box-sizing: border-box; }
+
 body { box-sizing: border-box; }
 
+/* =Variables ------------------------------------------------------------*/
+/* =General ------------------------------------------------------------*/
+body { font-family: 'charis_sil', 'verily_serif_monobook', serif; background: #faf8f3; color: #111111; }
 
-body {
-  font-family: 'charis_sil', 'verily_serif_monobook', serif;
-  background: #faf8f3;
-  color: #111;
-}
+a { color: #111111; /*  color: #6a4; */ font-weight: bold; text-decoration: none; border-bottom: 1px solid #faf8f3; }
 
-a {
-  color: #111;
-/*  color: #6a4; */
-  font-weight: bold;
-  text-decoration: none;
-}
-a:visited {
-/* color: #572; */
-}
-a:hover {
-  color: #555;
-/* color: inherit; */
-}
+a:visited { /* color: #572; */ }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+a:hover { /* text-decoration: underline; text-underline-position: under; */ border-bottom: 1px solid #5e5e5e; /* color: inherit; */ }
 
+ul { list-style: none; padding: 0; }
 
-#mainWrapper {
-  max-width: 80rem;
-  width: 100%;
-  margin: 3rem auto 1rem;
-  text-align: center;
-}
+li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
-#mainHeader {
-  padding-bottom: 3rem;
-}
+#mainWrapper { max-width: 80rem; width: 100%; margin: 3rem auto 1rem; text-align: center; }
 
-#mainTitle {
-  display: block;
-  text-align: center;
-  margin-bottom: 1.6rem;
-}
-#mainTitle.inner {
-  border-bottom: #111;
-}
+#mainHeader { padding-bottom: 3rem; }
 
-#headerLinks {
-  display: inline-block;
-}
-#headerLinks ul {
-  padding: 0;
-}
-#headerLinks li:not(:last-child):after {
-  content: ".";
-  padding-left: 0.9rem;
-}
-#headerLinks li:not(:last-child) {
-  padding: 0 0.9rem 0 0;
-}
-#headerLinks li {
-  display: inline-block;
-}
+#mainTitle { display: block; text-align: center; margin-bottom: 1.6rem; }
 
-.projects {
-  display: table;
-  margin: 0 auto;
-  text-align: left;
-}
-.projects li {
-  display: table-row;
-}
-.projects li .key {
-  display: table-cell;
-  text-align: right;
-  padding: 0.5rem 0;
-}
-.projects li .key:after {
-  content: "-";
-  text-decoration: none;
-  padding: 0 1.3rem 0 1.15rem;
-}
-.projects li .def {
-  display: table-cell;
-  padding-left: 0.7em;
-  text-indent: -0.9em;
-}
-.projects .details {
-  display: table-cell;
-  padding-left: 1.5rem;
-  font-style: italic;
-}
+#mainTitle .inner { font-weight: normal; }
+
+#headerLinks { display: inline-block; }
+
+#headerLinks ul { padding: 0; }
+
+#headerLinks li:not(:last-child):after { content: "."; padding-left: 0.9rem; }
+
+#headerLinks li:not(:last-child) { padding: 0 0.9rem 0 0; }
+
+#headerLinks li { display: inline-block; }
+
+/* =Projects ------------------------------------------------------------*/
+/* Apply on cell with greatest height */
+.projects { display: table; margin: 0 auto; text-align: left; }
+
+.projects li { display: table-row; }
+
+.projects li .key { display: table-cell; text-align: right; padding: 0.5rem 0; }
+
+.projects li .key:after { content: "."; text-decoration: none; padding: 0 1.3rem 0 1.15rem; }
+
+.projects li .def { display: table-cell; padding-left: 0.7em; text-indent: -0.9em; padding-bottom: 0.8rem; }
+
+.projects .details { display: table-cell; padding-left: 1.5rem; font-style: italic; }

@@ -6,7 +6,8 @@
     "url": "https://github.com/lleaff/lleaff.github.io"
   },
   "scripts": {
-      "watch": "while(true); do gulp watch; done"
+    "start": "cd ./dist; python -m SimpleHTTPServer",
+    "watch": "while(true); do gulp watch; done"
   },
   "private": "true",
   "devDependencies": {
@@ -16,6 +17,7 @@
     "gulp-debug": "latest",
     "gulp-gh-pages": "latest",
     "gulp-jade": "latest",
+    "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "latest"
   },
   "author": "lleaff"

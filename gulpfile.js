@@ -1,19 +1,19 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
+var sass = require('gulp-sass');
 var babel = require('gulp-babel');
-var ghPages = require('gulp-gh-pages');
 
+var ghPages = require('gulp-gh-pages');
 var debug = require('gulp-debug');
 
-
-
-
+/* =Config
+ *------------------------------------------------------------*/
 
 var srcPath = './src/';
 var src = {
   js: srcPath + 'js/',
   jade: srcPath,
-  css: srcPath + 'css/',
+  scss: srcPath + 'css/',
   img: srcPath + 'img/',
   fonts: srcPath + 'fonts/',
 };
@@ -31,13 +31,17 @@ var babelConfig = {
   presets: ['es2015']
 };
 
+var sassConfig = {
+  outputStyle: 'compact'
+};
 
 
-
+/* =Tasks
+ *------------------------------------------------------------*/
 
 gulp.task('default', ['build']);
 
-gulp.task('build', ['js', 'jade', 'css', 'img', 'other']);
+gulp.task('build', ['js', 'jade', 'scss', 'img', 'other']);
 
 gulp.task('other', function() {
   return gulp.src(src.fonts + '/**')
@@ -55,8 +59,9 @@ gulp.task('jade', function() {
     .pipe(gulp.dest(dest.jade));
 });
 
-gulp.task('css', function() {
-  return gulp.src(src.css + '/**.css')
+gulp.task('scss', function() {
+  return gulp.src(src.scss + '/**.scss')
+    .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(gulp.dest(dest.css));
 });
 
@@ -69,7 +74,7 @@ gulp.task('js', function() {
 gulp.task('watch', ['build'], function() {
   gulp.watch(src.js + '/**.js', ['js']);
   gulp.watch(src.jade + '/**.jade', ['jade']);
-  gulp.watch(src.css + '/**.css', ['css']);
+  gulp.watch(src.scss + '/**.scss', ['scss']);
   gulp.watch(src.img + '/**.img', ['img']);
 });
 
