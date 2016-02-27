@@ -7,14 +7,22 @@ mixin stylesheets
 mixin project(o)
   li.project
     span.key: a(href=o.link)= o.title
-    span.def!= o.desc
-    span.details= o.details + ' . ' + o.tech
+    span.def!= o.desc || ''
+    span.details= (o.details ? o.details + ' . ' : '') + (o.tech || '')
   if block
     li.projectPane
       o.pane
 
 mixin projects
   ul(class!=attributes.class, id!=attributes.id)
+    +project({
+      title: 'Programming paradigms',
+      link: 'https://goo.gl/cPRRjK',
+      desc: "A short presentation aiming to introduce different programming paradigms by focusing on the new features they bring rather than describing the restrictions they impose or the shortcomings of other paradigms.",
+      //-details: 'Collaboration',
+      //-tech: 'Node.js',
+    })
+
     +project({
       title: 'Backito',
       link: 'https://github.com/lleaff/Backito',

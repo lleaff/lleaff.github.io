@@ -97,6 +97,7 @@ $projectsRowMargin: 0.8rem; /* Apply on cell with greatest height */
   display: table-cell;
   text-align: right;
   padding: 0.5rem 0;
+  white-space: pre;
 }
 .projects li .key:after {
   content: ".";
