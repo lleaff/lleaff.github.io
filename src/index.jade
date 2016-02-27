@@ -16,11 +16,17 @@ mixin project(o)
 mixin projects
   ul(class!=attributes.class, id!=attributes.id)
     +project({
+      title: 'Backito',
+      link: 'https://github.com/lleaff/Backito',
+      desc: "Differential and remote backups utility.<br> Schedule backups to local targets, SSH servers, or SVN or GIT repos.<br>Restore files to earlier saved versions using a local differential history that is built upon everytime Backito is called.<br> <em>Winner of its category in ETNA's Linux code camp</em>.",
+      details: 'Collaboration',
+      tech: 'Node.js',
+    })
+
+    +project({
       title: 'VieMonJob',
       link: 'https://vismonjobphp-lleaff.c9users.io/',
-      desc: `Dynamic site for French startup Vie Mon Job. <br>
-      Features: <br>
-      Accounts, messaging, job posting, moderation, custom generic JavaScript UI elements (tabs, notifications, modals).`,
+      desc: "Dynamic site for French startup Vie Mon Job. <br> Features: <br> Accounts, messaging, job posting, moderation, custom generic JavaScript UI elements (tabs, notifications, modals). <br> <em>Winner of its category in ETNA's Web code camp</em>.",
       details: 'Collaboration',
       tech: 'PHP, JS (jQuery)',
     })
@@ -28,7 +34,7 @@ mixin projects
     +project({
       title: 'Dartygazin',
       link: 'https://dphp-lleaff.c9users.io/',
-      desc: 'Mockup for an imaginary electronics retail business. Mix of static and dynamic content (index page is static, categories, product and basket pages are dynamic).',
+      desc: 'Mockup for an imaginary electronics retail business. Mix of static and dynamic content.',
       details: 'Collaboration',
       tech: 'PHP, JS',
     })
@@ -56,7 +62,7 @@ html
         span#mainTitle: a.inner(href='/index.html') lleaff
         nav#headerLinks: ul
           li: a(href='https://github.com/lleaff') GitHub
-          li: a(href='https://c9.io/lleaff') Cloud9
+          //-li: a(href='https://c9.io/lleaff') Cloud9
           li: a(href='http://stackoverflow.com/users/4718923/lleaff') Stack Overflow
       main
         +projects.projects
