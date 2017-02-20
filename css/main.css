@@ -50,6 +50,10 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 #headerLinks li { display: inline-block; }
 
+#contact { margin-top: 3rem; text-align: right; }
+
+.contact-link { font-family: monospace; font-style: italic; font-size: 0.85rem; font-weight: normal; }
+
 /* =Projects ------------------------------------------------------------*/
 /* Apply on cell with greatest height */
 .projects { display: table; margin: 0 auto; text-align: left; }
