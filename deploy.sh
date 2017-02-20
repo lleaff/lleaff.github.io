@@ -17,22 +17,28 @@ confirm() {
 }
 
 bin_dir="$(npm bin)"
-files_to_delete="css fonts index.html"
+site_files="css fonts img index.html"
+files_to_delete="$site_files dist"
 current_branch="$(\git branch | grep \* | sed 's/^\* //')"
-deploy_branch="gh-pages"
+deploy_branch="master"
 
 "${bin_dir}/gulp"
-if [[ -f ./tmp~ ]]; then rm -r ./tmp~; fi
-mv ./dist ./tmp~
+if [ -d "./tmp~" ]; then rm -r "./tmp~"; fi
+mv ./dist "./tmp~"
 git checkout "$deploy_branch"
 # Clean previous files
 if confirm "Delete these files? : \"$files_to_delete\""; then
-  rm -r $files_to_delete
+  for f in $files_to_delete; do
+    if [ -f "$f" ] || [ -d "$f" ]; then
+      rm -r "$f"
+    fi
+  done
 else
   exit 1
 fi
-mv ./tmp~/* .
-rm -r ./tmp~
+mv "./tmp~/"* .
+rm -r "./tmp~"
+git add $site_files -f
 git commit -am "deploy $(date "+%y:%m:%d-%H:%M:%S")"
 
 if confirm "Push ?"; then
@@ -42,3 +48,4 @@ fi
 # Done
 
 git checkout "$current_branch"
+
