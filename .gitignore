@@ -1,5 +1,9 @@
-# Dist
+# Dist files
 dist/
+css
+fonts
+index.html
+tmp~/
 
 # Images
 **/img/*~
