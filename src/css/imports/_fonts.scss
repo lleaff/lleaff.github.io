@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'verily_serif_monobook';
+  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot');
+  src: url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.woff') format('woff'),
+    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.ttf') format('truetype'),
+    url('/fonts/verilyserifmono_book/VerilySerifMono-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'charis_sil';
+  src: url('/fonts/charissil/charissilr-webfont.eot');
+  src: url('/fonts/charissil/charissilr-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/charissil/charissilr-webfont.woff2') format('woff2'),
+    url('/fonts/charissil/charissilr-webfont.woff') format('woff'),
+    url('/fonts/charissil/charissilr-webfont.ttf') format('truetype'),
+    url('/fonts/charissil/charissilr-webfont.svg#charis_silregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'charis_sil';
+  src: url('/fonts/charissil/charissili-webfont.eot');
+  src: url('/fonts/charissil/charissili-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/charissil/charissili-webfont.woff2') format('woff2'),
+    url('/fonts/charissil/charissili-webfont.woff') format('woff'),
+    url('/fonts/charissil/charissili-webfont.ttf') format('truetype'),
+    url('/fonts/charissil/charissili-webfont.svg#charis_silitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'charis_sil';
+  src: url('/fonts/charissil/charissilbi-webfont.eot');
+  src: url('/fonts/charissil/charissilbi-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/charissil/charissilbi-webfont.woff2') format('woff2'),
+    url('/fonts/charissil/charissilbi-webfont.woff') format('woff'),
+    url('/fonts/charissil/charissilbi-webfont.ttf') format('truetype'),
+    url('/fonts/charissil/charissilbi-webfont.svg#charis_silbold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'charis_sil';
+  src: url('/fonts/charissil/charissilb-webfont.eot');
+  src: url('/fonts/charissil/charissilb-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/charissil/charissilb-webfont.woff2') format('woff2'),
+    url('/fonts/charissil/charissilb-webfont.woff') format('woff'),
+    url('/fonts/charissil/charissilb-webfont.ttf') format('truetype'),
+    url('/fonts/charissil/charissilb-webfont.svg#charis_silbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

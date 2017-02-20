@@ -1,0 +1,67 @@
+# Dist files
+dist/
+css
+fonts
+img
+index.html
+tmp~/
+
+# Images
+**/img/*~
+*.kra
+
+# Prod files
+sourcemaps/
+node_modules/
+.sass-cache/
+.publish/
+
+.tern-port
+
+#Binaries
+*.exe
+*.out
+*.o
+
+#Vim temp files
+*.swp
+*.swo
+*.swn
+*.swm
+
+###OS X
+
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+###Windows
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+# Windows shortcuts
+*.lnk

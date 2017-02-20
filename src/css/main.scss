@@ -1,0 +1,199 @@
+@import 'imports/fonts';
+
+*, *:before, *:after { box-sizing: border-box; }
+body { box-sizing: border-box; }
+
+
+/* =Variables
+ *------------------------------------------------------------*/
+$mainBgColor: #faf8f3;
+$mainFgColor: #111111;
+$altFgColor: #555555;
+
+$media-small:     "only screen and (max-width : 800px)";
+$media-verysmall: "only screen and (max-width : 350px)";
+
+
+/* =General
+ *------------------------------------------------------------*/
+body {
+  font-family: 'charis_sil', 'verily_serif_monobook', serif;
+  background: $mainBgColor;
+  color: $mainFgColor;
+}
+
+a {
+  color: $mainFgColor;
+/*  color: #6a4; */
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid $mainBgColor;
+}
+a:visited {
+/* color: #572; */
+}
+a:hover {
+  border-bottom: 1px solid lighten($mainFgColor, 30%);
+/* color: inherit; */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+#mainWrapper {
+  max-width: 80rem;
+  width: 100%;
+  margin: 3rem auto 3rem;
+  text-align: center;
+
+  @media #{$media-small} {
+    margin-top: 0.6rem;
+  }
+
+}
+
+#mainHeader {
+  padding-bottom: 3rem;
+
+  @media #{$media-small} {
+    padding-bottom: 1rem;
+  }
+}
+
+#mainLogo {
+  display: block;
+  border-bottom: none;
+}
+
+#mainTitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+#mainTitle .inner {
+  font-weight: normal;
+}
+
+#headerLinks {
+  display: inline-block;
+}
+#headerLinks ul {
+  margin: 0.1em;
+}
+#headerLinks li:not(:last-child):after {
+  content: ".";
+  padding-left: 0.9rem;
+}
+#headerLinks li:not(:last-child) {
+  padding: 0 0.9rem 0 0;
+}
+#headerLinks li {
+  display: inline-block;
+}
+
+/* =Projects
+ *------------------------------------------------------------*/
+$projectsRowMargin: 1rem; /* Apply on cell with greatest height */
+
+.projects {
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+}
+.project {
+  display: table-row;
+}
+.project .key {
+  display: table-cell;
+  text-align: right;
+  padding: 0.5rem 0;
+  white-space: pre;
+}
+.project .key:after {
+  content: ".";
+  text-decoration: none;
+  padding: 0 1.3rem 0 1.15rem;
+}
+.project .def {
+  display: table-cell;
+  padding-left: 0;
+  text-indent: 0.9em;
+  line-height: 1.65em;
+  padding-bottom: $projectsRowMargin;
+  width: 60%;
+}
+.projects .details {
+  display: table-cell;
+  padding-left: 1.5rem;
+  font-style: italic;
+  font-size: 0.91em;
+}
+
+@media #{$media-small} {
+  .projects {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .project {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .project:not(:last-child):after {
+    content: ".";
+    line-height: 0.1em;
+    display: block;
+    text-align: center;
+  }
+  .project .key {
+    display: block;
+    text-align: left;
+    padding-left: 1em;
+    padding: 0.5rem 0;
+    white-space: pre;
+  }
+  .project .key em {
+    font-size: 0.9em;
+  }
+  .project .key:after {
+    content: "";
+    text-decoration: none;
+    padding: 0;
+  }
+  .project .def {
+    display: block;
+    padding-left: 0;
+    text-indent: 0.9em;
+    text-align: justify;
+    padding-bottom: 0.2em;
+    width: 100%;
+  }
+  .projects .details {
+    display: block;
+    text-align: right;
+    padding-left: 1.5rem;
+    padding-bottom: $projectsRowMargin;
+    font-style: italic;
+  }
+}
+
+@media #{$media-verysmall} {
+  .project {
+    width: 100%;
+  }
+  .project .key {
+    text-align: center;
+    padding-left: 0;
+  }
+  .project .def {
+    padding-left: 0;
+  }
+}
