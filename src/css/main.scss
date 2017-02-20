@@ -8,7 +8,7 @@ body { box-sizing: border-box; }
  *------------------------------------------------------------*/
 $mainBgColor: #faf8f3;
 $mainFgColor: #111111;
-$altFgColor: #555555;
+$altFgColor: #6a6a6a;
 
 $media-small:     "only screen and (max-width : 800px)";
 $media-verysmall: "only screen and (max-width : 350px)";
@@ -96,6 +96,19 @@ li {
 }
 #headerLinks li {
   display: inline-block;
+}
+
+#contact {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+.contact-link {
+  font-family: monospace;
+  font-style: italic;
+  font-size: 0.85rem;
+  font-weight: normal;
+  //color: $altFgColor;
 }
 
 /* =Projects
