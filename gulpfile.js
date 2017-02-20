@@ -1,16 +1,16 @@
-var gulp = require('gulp');
-var jade = require('gulp-jade');
-var sass = require('gulp-sass');
-var babel = require('gulp-babel');
+const gulp = require('gulp');
+const jade = require('gulp-jade');
+const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 
-var ghPages = require('gulp-gh-pages');
-var debug = require('gulp-debug');
+const ghPages = require('gulp-gh-pages');
+const debug = require('gulp-debug');
 
 /* =Config
  *------------------------------------------------------------*/
 
-var srcPath = './src/';
-var src = {
+const srcPath = './src/';
+const src = {
   js: srcPath + 'js/',
   jade: srcPath,
   scss: srcPath + 'css/',
@@ -18,8 +18,8 @@ var src = {
   fonts: srcPath + 'fonts/',
 };
 
-var destPath = './dist/';
-var dest = {
+const destPath = './dist/';
+const dest = {
   js: destPath + 'js/',
   jade: destPath,
   css: destPath + 'css/',
@@ -27,14 +27,13 @@ var dest = {
   fonts: destPath + 'fonts/',
 };
 
-var babelConfig = {
+const babelConfig = {
   presets: ['es2015']
 };
 
-var sassConfig = {
+const sassConfig = {
   outputStyle: 'compact'
 };
-
 
 /* =Tasks
  *------------------------------------------------------------*/

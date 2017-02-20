@@ -1,3 +1,6 @@
+# Dist
+dist/
+
 # Prod files
 sourcemaps/
 node_modules/
