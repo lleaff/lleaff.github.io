@@ -19,11 +19,12 @@ confirm() {
 bin_dir="$(npm bin)"
 files_to_delete="css fonts index.html"
 current_branch="$(\git branch | grep \* | sed 's/^\* //')"
+deploy_branch="gh-pages"
 
 "${bin_dir}/gulp"
 if [[ -f ./tmp~ ]]; then rm -r ./tmp~; fi
 mv ./dist ./tmp~
-git checkout master
+git checkout "$deploy_branch"
 # Clean previous files
 if confirm "Delete these files? : \"$files_to_delete\""; then
   rm -r $files_to_delete
