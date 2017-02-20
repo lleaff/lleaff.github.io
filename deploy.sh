@@ -42,7 +42,7 @@ git add $site_files -f
 git commit -am "deploy $(date "+%y:%m:%d-%H:%M:%S")"
 
 if confirm "Push ?"; then
-  git push
+  git push origin "$deploy_branch"
 fi
 
 # Done
