@@ -10,6 +10,9 @@ $mainBgColor: #faf8f3;
 $mainFgColor: #111111;
 $altFgColor: #555555;
 
+$media-small:     "only screen and (max-width : 800px)";
+$media-verysmall: "only screen and (max-width : 350px)";
+
 
 /* =General
  *------------------------------------------------------------*/
@@ -55,6 +58,11 @@ li {
   padding-bottom: 3rem;
 }
 
+#mainLogo {
+  display: block;
+  border-bottom: none;
+}
+
 #mainTitle {
   display: block;
   text-align: center;
@@ -68,7 +76,7 @@ li {
   display: inline-block;
 }
 #headerLinks ul {
-  padding: 0;
+  margin: 0.1em;
 }
 #headerLinks li:not(:last-child):after {
   content: ".";
@@ -83,31 +91,32 @@ li {
 
 /* =Projects
  *------------------------------------------------------------*/
-$projectsRowMargin: 0.8rem; /* Apply on cell with greatest height */
+$projectsRowMargin: 1rem; /* Apply on cell with greatest height */
 
 .projects {
   display: table;
   margin: 0 auto;
   text-align: left;
 }
-.projects li {
+.project {
   display: table-row;
 }
-.projects li .key {
+.project .key {
   display: table-cell;
   text-align: right;
   padding: 0.5rem 0;
   white-space: pre;
 }
-.projects li .key:after {
+.project .key:after {
   content: ".";
   text-decoration: none;
   padding: 0 1.3rem 0 1.15rem;
 }
-.projects li .def {
+.project .def {
   display: table-cell;
-  padding-left: 0.7em;
-  text-indent: -0.9em;
+  padding-left: 0;
+  text-indent: 0.9em;
+  line-height: 1.65em;
   padding-bottom: $projectsRowMargin;
   width: 60%;
 }
@@ -115,4 +124,67 @@ $projectsRowMargin: 0.8rem; /* Apply on cell with greatest height */
   display: table-cell;
   padding-left: 1.5rem;
   font-style: italic;
+  font-size: 0.91em;
+}
+
+@media #{$media-small} {
+  .projects {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .project {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .project:not(:last-child):after {
+    content: ".";
+    line-height: 0.1em;
+    display: block;
+    text-align: center;
+  }
+  .project .key {
+    display: block;
+    text-align: left;
+    padding-left: 1em;
+    padding: 0.5rem 0;
+    white-space: pre;
+  }
+  .project .key em {
+    font-size: 0.9em;
+  }
+  .project .key:after {
+    content: "";
+    text-decoration: none;
+    padding: 0;
+  }
+  .project .def {
+    display: block;
+    padding-left: 0;
+    text-indent: 0.9em;
+    text-align: justify;
+    padding-bottom: 0.2em;
+    width: 100%;
+  }
+  .projects .details {
+    display: block;
+    text-align: right;
+    padding-left: 1.5rem;
+    padding-bottom: $projectsRowMargin;
+    font-style: italic;
+  }
+}
+
+@media #{$media-verysmall} {
+  .project {
+    width: 100%;
+  }
+  .project .key {
+    text-align: center;
+    padding-left: 0;
+  }
+  .project .def {
+    padding-left: 0;
+  }
 }

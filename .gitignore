@@ -1,6 +1,10 @@
 # Dist
 dist/
 
+# Images
+**/img/*~
+*.kra
+
 # Prod files
 sourcemaps/
 node_modules/

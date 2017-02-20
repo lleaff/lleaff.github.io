@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const jade = require('gulp-jade');
+const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 
@@ -12,7 +12,7 @@ const debug = require('gulp-debug');
 const srcPath = './src/';
 const src = {
   js: srcPath + 'js/',
-  jade: srcPath,
+  pug: srcPath,
   scss: srcPath + 'css/',
   img: srcPath + 'img/',
   fonts: srcPath + 'fonts/',
@@ -21,7 +21,7 @@ const src = {
 const destPath = './dist/';
 const dest = {
   js: destPath + 'js/',
-  jade: destPath,
+  pug: destPath,
   css: destPath + 'css/',
   img: destPath + 'img/',
   fonts: destPath + 'fonts/',
@@ -40,7 +40,7 @@ const sassConfig = {
 
 gulp.task('default', ['build']);
 
-gulp.task('build', ['js', 'jade', 'scss', 'img', 'other']);
+gulp.task('build', ['js', 'pug', 'scss', 'img', 'other']);
 
 gulp.task('other', function() {
   return gulp.src(src.fonts + '/**')
@@ -52,10 +52,10 @@ gulp.task('img', function() {
     .pipe(gulp.dest(dest.img));
 });
 
-gulp.task('jade', function() {
-  return gulp.src(src.jade + '/**.jade')
-    .pipe(jade())
-    .pipe(gulp.dest(dest.jade));
+gulp.task('pug', function() {
+  return gulp.src(src.pug + '/**.pug')
+    .pipe(pug())
+    .pipe(gulp.dest(dest.pug));
 });
 
 gulp.task('scss', function() {
@@ -72,7 +72,7 @@ gulp.task('js', function() {
 
 gulp.task('watch', ['build'], function() {
   gulp.watch(src.js + '/**.js', ['js']);
-  gulp.watch(src.jade + '/**.jade', ['jade']);
+  gulp.watch(src.pug + '/**.pug', ['pug']);
   gulp.watch(src.scss + '/**.scss', ['scss']);
   gulp.watch(src.img + '/**.img', ['img']);
 });
