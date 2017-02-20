@@ -9,7 +9,7 @@
     "start": "cd ./dist; python -m SimpleHTTPServer",
     "watch": "while(true); do gulp watch; done",
     "build": "gulp",
-    "deploy": "gulp && cp -r dist tmp~ && git checkout master && rm -r css fonts index.html && mv tmp~/* . && rm -r tmp~ && git commit -am \"deploy $(date +%y:%m:%d-%H:%M:%S)\""
+    "deploy": "bash ./deploy.sh"
   },
   "private": "true",
   "devDependencies": {
