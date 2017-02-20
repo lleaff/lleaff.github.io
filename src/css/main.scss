@@ -50,12 +50,21 @@ li {
 #mainWrapper {
   max-width: 80rem;
   width: 100%;
-  margin: 3rem auto 1rem;
+  margin: 3rem auto 3rem;
   text-align: center;
+
+  @media #{$media-small} {
+    margin-top: 0.6rem;
+  }
+
 }
 
 #mainHeader {
   padding-bottom: 3rem;
+
+  @media #{$media-small} {
+    padding-bottom: 1rem;
+  }
 }
 
 #mainLogo {
