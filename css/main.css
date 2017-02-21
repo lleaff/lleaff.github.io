@@ -8,6 +8,16 @@
 
 @font-face { font-family: 'charis_sil'; src: url("/fonts/charissil/charissilb-webfont.eot"); src: url("/fonts/charissil/charissilb-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/charissil/charissilb-webfont.woff2") format("woff2"), url("/fonts/charissil/charissilb-webfont.woff") format("woff"), url("/fonts/charissil/charissilb-webfont.ttf") format("truetype"), url("/fonts/charissil/charissilb-webfont.svg#charis_silbold") format("svg"); font-weight: bold; font-style: normal; }
 
+@font-face { font-family: 'Open Sans'; src: url("/fonts/open_sans/OpenSans-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Open Sans'; src: url("/fonts/open_sans/OpenSans-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Open Sans'; src: url("/fonts/open_sans/OpenSans-Light.ttf") format("truetype"); font-weight: 200; font-style: normal; }
+
+@font-face { font-family: 'Open Sans'; src: url("/fonts/open_sans/OpenSans-Italic.ttf") format("truetype"); font-weight: normal; font-style: italic; }
+
+@font-face { font-family: 'Open Sans'; src: url("/fonts/open_sans/OpenSans-LightItalic.ttf") format("truetype"); font-weight: 200; font-style: italic; }
+
 *, *:before, *:after { box-sizing: border-box; }
 
 body { box-sizing: border-box; }
@@ -30,9 +40,9 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 @media only screen and (max-width: 800px) { #mainWrapper { margin-top: 0.6rem; } }
 
-#mainHeader { padding-bottom: 3rem; }
+#mainHeader { padding-bottom: 3.6rem; }
 
-@media only screen and (max-width: 800px) { #mainHeader { padding-bottom: 1rem; } }
+@media only screen and (max-width: 800px) { #mainHeader { padding-bottom: 3rem; } }
 
 #mainLogo { display: block; border-bottom: none; }
 
@@ -50,9 +60,11 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 #headerLinks li { display: inline-block; }
 
-#contact { margin-top: 3rem; text-align: right; }
+#mainFooter { margin-top: 4.5rem; }
 
-#contact .contact-link { font-family: monospace; font-style: italic; font-size: 0.85rem; font-weight: normal; }
+#contact { text-align: center; }
+
+#contact .contact-link { font-family: "charis_sil", "verily_serif_monobook", serif; font-size: 0.78rem; font-style: normal; font-weight: normal; }
 
 /* =Projects ------------------------------------------------------------*/
 /* Apply on cell with greatest height */
