@@ -5,10 +5,11 @@ mixin stylesheets
   link(rel='stylesheet', href='css/main.css')
 
 mixin project(o)
+  - const separator = ' <span class="separator">.</span> ';
   li.project
     span.key: a(href=o.link)= o.title
     span.def!= o.desc || ''
-    span.details!= (o.details ? o.details + ' <span class="separator">.</span> ' : '') + (o.tech || '')
+    span.details!= `${o.details || ''}${o.details && o.tech ? separator : ''}${o.tech || ''}`
   if block
     li.projectPane
       o.pane
@@ -18,7 +19,7 @@ mixin projects
     +project({
       title: 'gulp-restructure-tree',
       link: 'https://github.com/SewanDevs/gulp-restructure-tree',
-      desc: "A Gulp plugin to move files based on a given set of declaratively defined rules. The goal was to help the migration away from an impratical legacy architecture to a more convenient one for development, while keeping the same release structure so the complex deployment process didn't have to be affected.",
+      desc: "A Gulp plugin to move files based on declaratively defined rules. The goal was to help migrating away from an impratical legacy architecture to a more convenient one for development, while keeping the same release structure so the complex deployment process at Sewan didn't have to be affected.",
       details: 'Solo',
       tech: 'Node.js',
     })
@@ -26,7 +27,8 @@ mixin projects
     +project({
       title: 'Programming paradigms',
       link: 'https://goo.gl/cPRRjK',
-      desc: "A presentation aiming to introduce the major programming paradigms by focusing on the new features they bring rather than the restrictions they impose or the shortcomings of other paradigms.",
+      desc: "A presentation aiming to introduce the major programming paradigms to beginners by focusing on the new features they bring, rather than the restrictions they impose or the shortcomings of other paradigms, hopefully increasing the motivation to learn them.",
+      details: 'Solo',
     })
 
     +project({
@@ -40,7 +42,7 @@ mixin projects
     +project({
       title: 'VieMonJob',
       link: 'https://vismonjobphp-lleaff.c9users.io/',
-      desc: "Dynamic site for French startup Vie Mon Job. <br> Features: <br> Accounts, messaging, job posting, moderation, custom generic JavaScript UI elements (tabs, notifications, modals). <br> <em>Winner of its category in ETNA's Web code camp</em>.",
+      desc: "Dynamic site for French startup Vie Mon Job. <br> Featuring: Accounts, messaging, job posting, moderation, custom generic JavaScript UI elements (tabs, notifications, modals). <br> <em>Winner of its category in ETNA's Web code camp</em>.",
       details: 'Collaboration',
       tech: 'PHP, JS (jQuery)',
     })
@@ -66,6 +68,13 @@ mixin contact(email)
   div#contact
     a.contact-link.contact-email(href='mailto:'+email)= email
 
+mixin headerLinks
+  ul(class!=attributes.class, id!=attributes.id)
+    li: a(href='https://github.com/lleaff') GitHub
+    //-li: a(href='https://c9.io/lleaff') Cloud9
+    li: a(href='http://stackoverflow.com/users/4718923/lleaff') Stack Overflow
+
+
 
 //------------------------------------------------------------
 
@@ -80,10 +89,7 @@ html
       header#mainHeader
         a#mainLogo.inner(href='/index.html'): img(src='/img/header_logo.png')
         //span#mainTitle: a.inner(href='/index.html') lleaff
-        nav#headerLinks: ul
-          li: a(href='https://github.com/lleaff') GitHub
-          //-li: a(href='https://c9.io/lleaff') Cloud9
-          li: a(href='http://stackoverflow.com/users/4718923/lleaff') Stack Overflow
+        +headerLinks#headerLinks
       main
         +projects.projects
     footer#mainFooter
