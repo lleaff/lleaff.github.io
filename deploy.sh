@@ -17,7 +17,7 @@ confirm() {
 }
 
 bin_dir="$(npm bin)"
-site_files="css fonts img index.html"
+site_files="css fonts img js index.html"
 files_to_delete="$site_files dist"
 current_branch="$(\git branch | grep \* | sed 's/^\* //')"
 deploy_branch="master"
