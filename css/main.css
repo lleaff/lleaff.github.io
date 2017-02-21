@@ -14,9 +14,9 @@ body { box-sizing: border-box; }
 
 /* =Variables ------------------------------------------------------------*/
 /* =General ------------------------------------------------------------*/
-body { font-family: 'charis_sil', 'verily_serif_monobook', serif; background: #faf8f3; color: #111111; }
+body { font-family: "charis_sil", "verily_serif_monobook", serif; background: #faf8f3; color: #111111; }
 
-a { color: #111111; /*  color: #6a4; */ font-weight: bold; text-decoration: none; border-bottom: 1px solid #faf8f3; }
+a { color: #111111; /* color: #6a4; */ font-weight: bold; text-decoration: none; border-bottom: 1px solid #faf8f3; }
 
 a:visited { /* color: #572; */ }
 
@@ -44,7 +44,7 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 #headerLinks ul { margin: 0.1em; }
 
-#headerLinks li:not(:last-child):after { content: "."; padding-left: 0.9rem; }
+#headerLinks li:not(:last-child):after { content: "."; text-decoration: none; font-weight: bold; padding-left: 0.9rem; }
 
 #headerLinks li:not(:last-child) { padding: 0 0.9rem 0 0; }
 
@@ -52,7 +52,7 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 #contact { margin-top: 3rem; text-align: right; }
 
-.contact-link { font-family: monospace; font-style: italic; font-size: 0.85rem; font-weight: normal; }
+#contact .contact-link { font-family: monospace; font-style: italic; font-size: 0.85rem; font-weight: normal; }
 
 /* =Projects ------------------------------------------------------------*/
 /* Apply on cell with greatest height */
@@ -62,20 +62,22 @@ li { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 .project .key { display: table-cell; text-align: right; padding: 0.5rem 0; white-space: pre; }
 
-.project .key:after { content: "."; text-decoration: none; padding: 0 1.3rem 0 1.15rem; }
+.project .key:after { content: "."; text-decoration: none; font-weight: bold; padding: 0 1.3rem 0 1.15rem; }
 
 .project .def { display: table-cell; padding-left: 0; text-indent: 0.9em; line-height: 1.65em; padding-bottom: 1rem; width: 60%; }
 
-.projects .details { display: table-cell; padding-left: 1.5rem; font-style: italic; font-size: 0.91em; }
+.project .details { display: table-cell; padding-left: 1.5rem; font-style: italic; font-size: 0.91em; }
+
+.project .details .separator { text-decoration: none; font-weight: bold; }
 
 @media only screen and (max-width: 800px) { .projects { display: block; margin: 0 auto; text-align: left; }
   .project { display: block; margin: 0 auto; width: 95%; }
-  .project:not(:last-child):after { content: "."; line-height: 0.1em; display: block; text-align: center; }
+  .project:not(:last-child):after { content: "."; text-decoration: none; font-weight: bold; line-height: 0.1em; display: block; text-align: center; }
   .project .key { display: block; text-align: left; padding-left: 1em; padding: 0.5rem 0; white-space: pre; }
+  .project .key:after { content: ""; text-decoration: none; font-weight: bold; text-decoration: none; padding: 0; }
   .project .key em { font-size: 0.9em; }
-  .project .key:after { content: ""; text-decoration: none; padding: 0; }
   .project .def { display: block; padding-left: 0; text-indent: 0.9em; text-align: justify; padding-bottom: 0.2em; width: 100%; }
-  .projects .details { display: block; text-align: right; padding-left: 1.5rem; padding-bottom: 1rem; font-style: italic; } }
+  .project .details { display: block; text-align: right; padding-left: 1.5rem; padding-bottom: 1rem; font-style: italic; } }
 
 @media only screen and (max-width: 350px) { .project { width: 100%; }
   .project .key { text-align: center; padding-left: 0; }
