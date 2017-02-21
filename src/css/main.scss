@@ -7,7 +7,7 @@ body { box-sizing: border-box; }
 /* =Variables
  *------------------------------------------------------------*/
 $mainFont: 'charis_sil', 'verily_serif_monobook', serif;
-$altFont: monospace;
+$altFont: 'Open Sans';
 
 $mainBgColor: #faf8f3;
 $mainFgColor: #111111;
@@ -70,14 +70,13 @@ li {
   @media #{$media-small} {
     margin-top: 0.6rem;
   }
-
 }
 
 #mainHeader {
-  padding-bottom: 3rem;
+  padding-bottom: 3.6rem;
 
   @media #{$media-small} {
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -114,14 +113,17 @@ li {
   }
 }
 
+#mainFooter {
+  margin-top: 4.5rem;
+}
+
 #contact {
-  margin-top: 3rem;
-  text-align: right;
+  text-align: center;
 
   .contact-link {
-    font-family: $altFont;
-    font-style: italic;
-    font-size: 0.85rem;
+    font-family: $mainFont;
+    font-size: 0.78rem;
+    font-style: normal;
     font-weight: normal;
     //color: $altFgColor;
   }
