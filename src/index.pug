@@ -8,7 +8,7 @@ mixin project(o)
   li.project
     span.key: a(href=o.link)= o.title
     span.def!= o.desc || ''
-    span.details= (o.details ? o.details + ' . ' : '') + (o.tech || '')
+    span.details!= (o.details ? o.details + ' <span class="separator">.</span> ' : '') + (o.tech || '')
   if block
     li.projectPane
       o.pane
