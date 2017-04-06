@@ -1,4 +1,4 @@
-var styles = {
+const styles = {
   plain: 'font-family:sans-serif;font-size:1.5em;',
   em: 'color:#b72;font-family:sans-serif;font-size:1.5em;',
 };
