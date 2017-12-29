@@ -16,6 +16,11 @@ confirm() {
   esac
 }
 
+if [[ ! -d node_modules/ ]]; then
+  echo 'NPM modules not installed, run "npm install" to install them.' 1>&2
+  exit 1
+fi
+
 bin_dir="$(npm bin)"
 site_files="css fonts img js index.html"
 files_to_delete="$site_files dist"
